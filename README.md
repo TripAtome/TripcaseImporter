@@ -4,7 +4,7 @@
 
 The **TripCase Migration Assistant** is a Python-based tool designed to allow users to **download their cruise, flight, and hotel data** from the **TripCase** platform. ThisMigration Assistant enables users to extract their travel itineraries, including cruise details, flight information, and hotel bookings, and export them in **JSON format** for future use.
 
-Once the new platform is live, you can **upload this data to the platform** to manage your travel plans more effectively. 
+Once tripatome is live, you can **upload this data to the platform** to manage your travel plans more effectively. 
 
 ### **Important Notice**  
 **TripCase will be shutting down on April 1, 2025.** After this date, the TripCase platform will no longer be available, and thisMigration Assistant will no longer function.
