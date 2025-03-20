@@ -42,7 +42,7 @@ In the meantime, I am **actively working on building a new travel platform**. Th
 ```bash
 pip install -r requirements.txt
 ```
-3. Enter your credentials in the `temp.env` file and rename the `temp.env` file to `.env`
+3. Enter your tripcase credentials in the `env.temp` file and rename the `env.temp` file to `.env`
 
 4. Run the python script
 
