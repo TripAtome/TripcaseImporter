@@ -35,7 +35,8 @@ In the meantime, I am **actively working on building a new travel platform**. Th
 1. **Clone this repository:**
 
 ``` bash
-
+   git clone https://github.com/TripAtome/TripcaseMigrationAssistant.git
+   cd tripcase-migration-assistant
 ```
 
 2. **Install required dependencies:**
@@ -47,3 +48,5 @@ pip install -r requirements.txt
 
 4. Run the python script
 
+## OR you can use the docker version 
+I haven't had the chance to test the Docker version yet, so I can't confirm if everything is working as expected.
