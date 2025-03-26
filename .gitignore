@@ -1,6 +1,6 @@
 *.json
 .env
-Dockerfile
+
 .venv
 .idea
  __pycache__

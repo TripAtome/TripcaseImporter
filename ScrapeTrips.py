@@ -131,7 +131,7 @@ def scrape_past_trips(driver, scrape_limit=None):
 
     # Check if the element exists
     if len(elements) != 0:
-        print(elements[0].text)
+        print(+elements[0].text)
         return
 
     allTrips = []
@@ -150,7 +150,7 @@ def scrape_past_trips(driver, scrape_limit=None):
         if not past_trips:
             print("No past trips found!")
             return
-        print(len(past_trips))
+        print("number of past trips: " + str(len(past_trips)))
 
         # driver.find_element(By.XPATH, '//*[@id="past-trip-list-wrapper"]/p').click()
         rangeForTheLoop = len(past_trips) if scrape_limit is None else scrape_limit

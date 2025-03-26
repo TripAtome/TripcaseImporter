@@ -18,14 +18,16 @@ In the meantime, I am **actively working on building a new travel platform**. Th
 - **Cruise Data:** Download details about your cruise itineraries, such as cruise line, ship name, embarkation date, and port of call.
 - **Flight Information:** Scrape flight numbers, departure times, arrival times, and statuses.
 - **Hotel Bookings:** Extract hotel reservation details, including hotel name, location, and check-in/check-out dates.
-- **Export Data in JSON Format:** The Migration Assistant exports all the extracted data in  for easy uploading and integration with the new platform.
+- **Export Data in JSON Format:** The Migration Assistant exports all the extracted data in for easy uploading and integration with the new platform.
 
+## Recomendation
+- I would still recommend to download your data in all the formats 
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.11.4
 - Pip (Python package manager)
 
 ### Steps
@@ -33,8 +35,7 @@ In the meantime, I am **actively working on building a new travel platform**. Th
 1. **Clone this repository:**
 
 ``` bash
-   git clone https://github.com/yourusername/tripcase-migration-assistant.git
-   cd tripcase-migration-assistant
+
 ```
 
 2. **Install required dependencies:**

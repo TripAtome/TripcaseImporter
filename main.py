@@ -9,6 +9,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from ScrapeTrips import scrape_past_trips, scrape_active_trips
+from selenium.webdriver.chrome.options import Options
+
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,10 +24,20 @@ if not email or not password:
 
 
 def init_driver():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.implicitly_wait(10)  # Set an implicit wait time for elements to load
-    return driver
+    # Set up Chrome options for headless mode
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Enable headless mode
+    chrome_options.add_argument("--no-sandbox")  # Disable sandbox for Docker
+    chrome_options.add_argument("--disable-gpu")  # Disable GPU acceleration (optional)
+    chrome_options.add_argument("--remote-debugging-port=9222")  # Enable remote debugging (optional)
 
+    # Initialize the Chrome WebDriver with the specified options
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+
+    # Set an implicit wait time for elements to load
+    driver.implicitly_wait(10)
+
+    return driver
 
 def login(driver, email, password):
     try:
@@ -55,22 +67,15 @@ def login(driver, email, password):
         exit(1)
 
 
-def close_driver(driver):
-    driver.quit()
-
-
-
-
-
 # Main function to control the script's flow
 def main():
     driver = init_driver()
     login(driver, email, password)
 
-    scrape_past_trips(driver, 10)
+    scrape_past_trips(driver, None)
     print("done Scraping the past")
     scrape_active_trips(driver)
-    close_driver(driver)
+    driver.quit()
 
 
 if __name__ == "__main__":
